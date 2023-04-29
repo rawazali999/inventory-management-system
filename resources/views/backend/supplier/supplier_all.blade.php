@@ -22,7 +22,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                <a href="" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">Add Supplier </a> <br>  <br>               
+                <a href="{{ route('supplier.add') }}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">Add Supplier </a> <br>  <br>               
 
                     <h4 class="card-title">Supplier All All Data </h4>
                  
@@ -51,9 +51,9 @@
                             <td> {{ $item->action }} </td> 
                             
                             <td>
-     <a href="" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
+     <a href="{{ route('supplier.edit',$item->id) }}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
 
-     <a href="" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+     <a href="{{ route('supplier.delete',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
 
                             </td>
                            
