@@ -8,6 +8,7 @@ use App\Http\Controllers\Pos\CustomerController;
 use App\Http\Controllers\Pos\UnitController;
 use App\Http\Controllers\Pos\CategoryController;
 use App\Http\Controllers\Pos\ProductController;
+use App\Http\Controllers\Pos\PurchaseController;
 
 
 Route::get('/', function () {
@@ -81,6 +82,12 @@ Route::controller(ProductController::class)->group(function () {
     Route::post('/product/update', 'ProductUpdate')->name('product.update');
     Route::get('/product/delete/{id}', 'ProductDelete')->name('product.delete');
 });
+
+// Purchase All Route
+Route::controller(PurchaseController::class)->group(function () {
+    Route::get('/purchase/all', 'PurchaseAll')->name('purchase.all');
+});
+
 
 
 
