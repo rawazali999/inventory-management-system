@@ -24,9 +24,9 @@
                     <div class="card-body">
 
                         <a href="{{ route('purchase.add') }}" class="btn btn-dark btn-rounded waves-effect waves-light"
-                            style="float:right;">Add Purchase </a> <br> <br>
+                            style="float:right;">Purchase Pending </a> <br> <br>
 
-                        <h4 class="card-title">Purchase All Data </h4>
+                        <h4 class="card-title">Purchase All Pending Data </h4>
 
 
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
@@ -56,7 +56,8 @@
                                     <td> {{ $item['supplier']['name'] }} </td>
                                     <td> {{ $item['category']['name'] }} </td>
                                     <td> {{ $item->buying_qty }} </td>
-                                    <td> {{ $item['category']['name'] }} </td>
+                                    <td> {{ $item['product']['name'] }} </td>
+
                                     <td>
                                         @if($item->status == '0')
                                         <span class="btn btn-warning">Pending</span>
@@ -67,7 +68,7 @@
 
                                     <td>
                                         @if($item->status == '0')
-                                        <a href="{{ route('purchase.approve',$item->id) }} " class="btn btn-danger sm"
+                                        <a href="{{route('purchase.approve',$item->id)}}" class="btn btn-danger sm"
                                             title="Approved" id="ApproveBtn"> <i class="fas fa-check-circle"></i> </a>
                                         @endif
                                     </td>
