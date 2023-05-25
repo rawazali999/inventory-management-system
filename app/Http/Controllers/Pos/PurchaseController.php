@@ -11,8 +11,6 @@ use App\Models\Unit;
 use App\Models\Category;
 use Auth;
 
-
-
 class PurchaseController extends Controller
 {
     public function PurchaseAll()
@@ -22,7 +20,6 @@ class PurchaseController extends Controller
         return view('backend.purchase.purchase_all', compact('allData'));
 
     } // End Method 
-
     public function PurchaseAdd()
     {
 

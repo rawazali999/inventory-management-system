@@ -24,20 +24,18 @@
 </head>
 
 <body class="auth-body-bg">
-    <div class="bg-overlay"></div>
     <div class="wrapper-page">
         <div class="container-fluid p-0">
             <div class="card">
                 <div class="card-body">
 
-                    <div class="text-center mt-4">
-                        <div class="mb-3">
-                            <a href="index.html" class="auth-logo">
-                                <img src="{{ asset('backend/assets/images/inventory-management.png') }}" height="80"
-                                    class="logo-dark mx-auto" alt="">
-                                <img src="{{ asset('backend/assets/images/inventory-management.png') }}" height="30"
-                                    class="logo-light mx-auto" alt="">
-                            </a>
+                    <div class="text-center mt-2">
+                        <div class="mb-1">
+                            <img src="{{ asset('backend/assets/images/inventory-management.png') }}" height="80"
+                                class="logo-dark mx-auto" alt="">
+                            <img src="{{ asset('backend/assets/images/inventory-management.png') }}" height="30"
+                                class="logo-light mx-auto" alt="">
+
                         </div>
                     </div>
 
@@ -74,7 +72,7 @@
 
                             <div class="form-group mb-3 text-center row mt-3 pt-1">
                                 <div class="col-12">
-                                    <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Log
+                                    <button class="btn btn-success w-100 waves-effect waves-light" type="submit">Log
                                         In</button>
                                 </div>
                             </div>
