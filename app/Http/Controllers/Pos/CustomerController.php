@@ -18,6 +18,7 @@ class CustomerController extends Controller
         return view('backend.customer.customer_all', compact('customers'));
 
     } // End Method
+
     public function CustomerAdd()
     {
         return view('backend.customer.customer_add');
@@ -67,7 +68,7 @@ class CustomerController extends Controller
         if ($request->file('customer_image')) {
 
             $image = $request->file('customer_image');
-            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension(); // 343434.png
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(200, 200)->save('upload/customer/' . $name_gen);
             $save_url = 'upload/customer/' . $name_gen;
 
